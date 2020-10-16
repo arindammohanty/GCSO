@@ -24,19 +24,17 @@ function draw() {
     car.velocityX= 0;
     Deformation = 0.5*weight*speed*speed/2250 ;
   }
-  if(Deformation < 100){
-    car.shapeColor = rgb(0,255,0);
-    wall.shapeColor = rgb(0,255,0);
+  if(Deformation > 180){
+    car.shapeColor = rgb(255,0,0);
+    wall.shapeColor = rgb(255,0,0);
   }
-  
   if(Deformation > 100 && Deformation < 180){
     car.shapeColor = rgb(230,230,0);
     wall.shapeColor = rgb(230,230,0);
   }
-
-  if(Deformation > 180){
-    car.shapeColor = rgb(255,0,0);
-    wall.shapeColor = rgb(255,0,0);
+  if(Deformation < 100){
+    car.shapeColor = rgb(0,255,0);
+    wall.shapeColor = rgb(0,255,0);
   }
   drawSprites();
 }
